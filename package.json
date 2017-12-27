@@ -1,0 +1,16 @@
+{
+  "name": "notificationservice",
+  "version": "1.0.0",
+  "description": "This Service fetches the messages from message broker and emits on socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sachin Harnahalli",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
