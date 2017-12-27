@@ -3,6 +3,7 @@ const http = require('http');
 const socketIO = require('socket.io');
 
 const notificationHelper = require('./notificationHelper');
+const PORT = process.env.PORT || '3020';
 
 const service = express();
 service.use(express.static(__dirname));
@@ -13,6 +14,7 @@ io.on('connection', (socket) => {
     notificationHelper.receiveNPostMessage(io);
 });
 
-server.listen(3020, () => {
-    console.log('Notification Service started on port 3020');
+server.listen(PORT, () => {
+    console.log(`Notification Service started on port ${PORT}`);
+    notificationHelper.receiveNPostMessage(io);
 });

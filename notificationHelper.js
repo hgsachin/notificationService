@@ -1,6 +1,6 @@
 const amqp = require('amqplib/callback_api');
 
-const MESSAGE_SERVER = 'amqp://localhost';
+const MESSAGE_SERVER = process.env.RABBITMQ_BIGWIG_URL || 'amqp://localhost';
 const QUEUE = 'metalAppQueue';
 
 const receiveNPostMessage = (io) => {

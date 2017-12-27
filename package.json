@@ -4,7 +4,11 @@
   "description": "This Service fetches the messages from message broker and emits on socket",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.9.0"
   },
   "author": "Sachin Harnahalli",
   "license": "ISC",
